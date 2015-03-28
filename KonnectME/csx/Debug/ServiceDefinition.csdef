@@ -6,16 +6,19 @@
     </LocalResources>
     <ConfigurationSettings />
     <Endpoints>
-      <InputEndpoint name="Endpoint1" protocol="http" port="80" localPort="80" />
+      <InputEndpoint name="Microsoft.WindowsAzure.Plugins.WebDeploy.InputEndpoint" protocol="tcp" port="8172" localPort="8172" />
+      <InputEndpoint name="Web Endpoint" protocol="http" port="80" localPort="80" />
     </Endpoints>
     <Certificates />
   </WebRole>
-  <WorkerRole name="WorkerRole1">
+  <WorkerRole name="WorkerRole">
     <LocalResources>
       <LocalStorage name="DiagnosticStore" sizeInMB="4096" cleanOnRoleRecycle="false" />
     </LocalResources>
     <ConfigurationSettings />
-    <Endpoints />
+    <Endpoints>
+      <InputEndpoint name="Media_Endpoint" protocol="udp" port="11000" localPort="11000" />
+    </Endpoints>
     <Certificates />
   </WorkerRole>
 </ServiceDefinition>

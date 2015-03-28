@@ -1,16 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ServiceDefinition name="KonnectME" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-06.2.4">
-  <WorkerRole name="WorkerRole1" vmsize="Small" />
+  <WorkerRole name="WorkerRole" vmsize="Small">
+    <Endpoints>
+      <InputEndpoint name="Media_Endpoint" protocol="udp" port="11000" />
+    </Endpoints>
+  </WorkerRole>
   <WebRole name="WebRole1" vmsize="Small">
     <Sites>
       <Site name="Web">
         <Bindings>
-          <Binding name="Endpoint1" endpointName="Endpoint1" />
+          <Binding name="Endpoint1" endpointName="Web Endpoint" />
         </Bindings>
       </Site>
     </Sites>
     <Endpoints>
-      <InputEndpoint name="Endpoint1" protocol="http" port="80" />
+      <InputEndpoint name="Web Endpoint" protocol="http" port="80" />
     </Endpoints>
   </WebRole>
 </ServiceDefinition>

@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "KonnectME", "KonnectME\KonnectME.ccproj", "{95D18CFD-AE1B-41A6-8208-F7A933309AA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerRole1", "WorkerRole1\WorkerRole1.csproj", "{0C043262-C5CE-4238-8E5C-CE0220E169F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerRole", "WorkerRole1\WorkerRole.csproj", "{0C043262-C5CE-4238-8E5C-CE0220E169F2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRole1", "WebRole1\WebRole1.csproj", "{4491172F-77ED-476D-892C-51B6E16249A4}"
 EndProject

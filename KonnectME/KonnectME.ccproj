@@ -45,22 +45,25 @@
       <RoleName>WebRole1</RoleName>
       <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
     </ProjectReference>
-    <ProjectReference Include="..\WorkerRole1\WorkerRole1.csproj">
-      <Name>WorkerRole1</Name>
+    <ProjectReference Include="..\WorkerRole1\WorkerRole.csproj">
+      <Name>WorkerRole</Name>
       <Project>{0c043262-c5ce-4238-8e5c-ce0220e169f2}</Project>
       <Private>True</Private>
       <RoleType>Worker</RoleType>
-      <RoleName>WorkerRole1</RoleName>
-      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
+      <RoleName>WorkerRole</RoleName>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Profiles" />
     <Folder Include="WebRole1Content\" />
-    <Folder Include="WorkerRole1Content\" />
+    <Folder Include="WorkerRoleContent" />
   </ItemGroup>
   <ItemGroup>
     <DiagnosticsConfiguration Include="WebRole1Content\diagnostics.wadcfgx" />
-    <DiagnosticsConfiguration Include="WorkerRole1Content\diagnostics.wadcfgx" />
+    <DiagnosticsConfiguration Include="WorkerRoleContent\diagnostics.wadcfgx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishProfile Include="Profiles\konnectmeProduction.azurePubxml" />
   </ItemGroup>
   <!-- Import the target files for this project template -->
   <PropertyGroup>
